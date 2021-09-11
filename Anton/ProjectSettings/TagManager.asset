@@ -9,6 +9,7 @@ TagManager:
   - Visitor
   - Scene
   - Panel
+  - LocalizationManager
   layers:
   - Default
   - TransparentFX
