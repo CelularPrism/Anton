@@ -31,8 +31,15 @@ public class SceneController : MonoBehaviour
             SceneCharm += item.Trash.charm;
         }
 
-        Respect.text = "Respect: " + PlayerRespect.ToString();
-        Money.text = "Money: " + PlayerMoney.ToString();
+        int textIndex = Respect.text.IndexOf(':');
+        string text = Respect.text.Substring(0, textIndex + 2);
+
+        Respect.text = text + PlayerRespect.ToString();
+
+        textIndex = Money.text.IndexOf(':');
+        text = Money.text.Substring(0, textIndex + 2);
+
+        Money.text = text + PlayerMoney.ToString();
 
         CheckedCharm();
     }
